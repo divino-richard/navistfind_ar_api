@@ -1,0 +1,46 @@
+{
+  "name": "rest-api",
+  "version": "1.0.0",
+  "description": "Job Genie RESTful API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts & npx prisma studio",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "build": "tsc",
+    "db:push": "npx prisma generate & npx prisma db push",
+    "db:generate": "npx prisma generate",
+    "db:seed": "ts-node prisma/seeder.ts"
+  },
+  "author": "Richard Divino",
+  "license": "ISC",
+  "devDependencies": {
+    "@jest/globals": "^30.0.5",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/jest": "^30.0.0",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^22.10.1",
+    "jest": "^30.0.5",
+    "ts-jest": "^29.4.0",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.1.0",
+    "@prisma/client": "^7.1.0",
+    "axios": "^1.8.4",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.7",
+    "prisma": "^7.1.0",
+    "ts-node": "^10.9.2",
+    "zod": "^3.23.8"
+  }
+}
